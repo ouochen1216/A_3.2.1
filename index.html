@@ -687,8 +687,8 @@
         <div class="guide-body" id="guideBody"></div>
 
         <div class="guide-footer">
-          <button class="guide-btn secondary" id="guidePrevBtn">上一頁</button>
-          <button class="guide-btn" id="guideNextBtn">下一頁</button>
+          <button class="guide-btn secondary" id="guidePrevBtn">上一󠇡頁</button>
+          <button class="guide-btn" id="guideNextBtn">下一󠇡頁</button>
         </div>
       </div>
     </div>
@@ -896,7 +896,7 @@
       endScreenEl.classList.remove("visible");
 
       endTitleEl.textContent = "全部題目完成";
-      restartBtn.textContent = "再玩一次";
+      restartBtn.textContent = "再玩一󠇡次";
 
       renderQuestion();
     }
@@ -996,11 +996,11 @@
     function showFeedback(isCorrect) {
       feedbackIconEl.textContent = isCorrect ? "✓" : "✗";
       feedbackIconEl.style.color = isCorrect ? "#16a34a" : "#dc2626";
-      feedbackTextEl.textContent = isCorrect ? "答對了" : "再想一想";
+      feedbackTextEl.textContent = isCorrect ? "答對了" : "再想一󠇢想";
 
       const msg = isCorrect
-        ? (currentIndex < totalQuestions - 1 ? "進入下一題。" : "即將顯示結果。")
-        : "這個不是最少錢幣的付款方式。";
+        ? (currentIndex < totalQuestions - 1 ? "進入下一󠇢題。" : "即將顯示結果。")
+        : "這個󠇡不󠇡是最少錢幣的付款方式。";
       feedbackSubTextEl.innerHTML = punctToBreaks(msg);
 
       feedbackOverlayEl.classList.add("visible");
@@ -1044,7 +1044,7 @@
       () => {
         const title = "付款小遊戲！";
         const text =
-          "這是一個付款的小遊戲，每一題都會有一個我們要購買的東西，以及這個物品的價格，利用你的聰明才智，找出四種付款方式中，錢幣數量最少的付款方式吧！";
+          "這是一󠇢個󠇡付款的小遊戲，每一󠇢題都會有一󠇢個󠇡我們要購買的東西，以及這個󠇡物品的價格，利用你的聰明才智，找出四種付款方式中，錢幣數量最少的付款方式吧！";
         return `
           <div class="guide-inner center-page">
             <div class="guide-page-title">${title}</div>
@@ -1056,7 +1056,7 @@
       () => `
         <div class="guide-inner">
           <div class="guide-page-title">先看左邊</div>
-          <div class="guide-text">${punctToBreaks("左邊會顯示這一題要買的東西和價格，你要用右邊的四種付款方式，找到錢幣數量最少的那一種。")}</div>
+          <div class="guide-text">${punctToBreaks("左邊會顯示這一󠇢題要買的東西󠇡和價格，你要用右邊的四種付款方式，找到錢幣數量最少的那一󠇢種。")}</div>
 
           <div class="demo-wrap">
             <div class="demo" data-demo="p2">
@@ -1079,7 +1079,7 @@
 
               <div class="demo-right">${demoCardsHTML()}</div>
 
-              <div class="callout-box" data-target=".p2-target-leftinfo" data-label="這題要買的東西和價格"></div>
+              <div class="callout-box" data-target=".p2-target-leftinfo" data-label="這題要買的東西󠇡和價格"></div>
             </div>
           </div>
         </div>
@@ -1088,7 +1088,7 @@
       () => `
         <div class="guide-inner">
           <div class="guide-page-title">再看右邊</div>
-          <div class="guide-text">${punctToBreaks("右邊有四種付款方式，你只要點選你覺得錢幣數量最少的那一格，就完成作答。")}</div>
+          <div class="guide-text">${punctToBreaks("右邊有四種付款方式，你只要點選你覺得錢幣數量最少的那一󠇢格，就完成作答。")}</div>
 
           <div class="demo-wrap">
             <div class="demo" data-demo="p3">
@@ -1111,7 +1111,7 @@
 
               <div class="demo-right p3-target-rightarea">${demoCardsHTML()}</div>
 
-              <div class="callout-box" data-target=".p3-target-rightarea" data-label="點選一格付款方式"></div>
+              <div class="callout-box" data-target=".p3-target-rightarea" data-label="點選一󠇢格付款方式"></div>
             </div>
           </div>
         </div>
@@ -1120,7 +1120,7 @@
       () => `
         <div class="guide-inner">
           <div class="guide-page-title">答對或答錯會怎樣</div>
-          <div class="guide-text">${punctToBreaks("當你點選付款方式後，會出現答對或答錯的提示，答對會進入下一題，答錯會提醒你再想想。")}</div>
+          <div class="guide-text">${punctToBreaks("當你點選付款方式後，會出現答對或答錯的提示，答對會進入下一󠇢題，答錯會提醒你再想想。")}</div>
 
           <div class="feedback-samples">
             <div class="feedback-sample">
@@ -1131,8 +1131,8 @@
 
             <div class="feedback-sample">
               <div class="icon" style="color:#dc2626;">✗</div>
-              <div class="title">再想一想</div>
-              <div class="sub">${punctToBreaks("這個不是最少錢幣的付款方式。")}</div>
+              <div class="title">再想一󠇢想</div>
+              <div class="sub">${punctToBreaks("這個󠇡不是最少錢幣的付款方式。")}</div>
             </div>
           </div>
         </div>
@@ -1152,7 +1152,7 @@
     }
 
     function renderGuidePage() {
-      guideBody.scrollTop = 0; // ✅ 換頁回到最上面，避免上一頁滾動位置影響
+      guideBody.scrollTop = 0; // ✅ 換頁回到最上面，避免上一󠇡頁滾動位置影響
       guideBody.innerHTML = guidePages[guidePage]();
       guideIndicator.textContent = `${guidePage + 1} / ${guidePages.length}`;
 
@@ -1160,7 +1160,7 @@
       guidePrevBtn.style.opacity = guidePrevBtn.disabled ? "0.55" : "1";
       guidePrevBtn.style.cursor = guidePrevBtn.disabled ? "not-allowed" : "pointer";
 
-      guideNextBtn.textContent = (guidePage === guidePages.length - 1) ? "開始遊戲" : "下一頁";
+      guideNextBtn.textContent = (guidePage === guidePages.length - 1) ? "開始遊戲" : "下一󠇡頁";
 
       requestAnimationFrame(() => placeAllCallouts());
     }
